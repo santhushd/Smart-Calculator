@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Calculator</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D9D9D9;
+    color: #333333;
+  }
+  nav {
+    background-color: #333333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  nav img {
+    max-height: 40px;
+    border-radius: 7px;
+  }
+  .menu-button {
+    display: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: #2AA5DA;
+    color: white;
+  }
+  .nav-links {
+    display: flex;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #2AA5DA;
+    min-width: 160px;
+    z-index: 1;
+    top: 60px;
+    right: 0;
+  }
+  .dropdown a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown:hover {
+    display: block;
+  }
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+  section h3{
+    padding-top: 0;
+    margin-top: 0;
+  }
+  section a{
+    opacity: 1;
+    color: white;
+  }
+  section:nth-child(odd) {
+    background-color: #2AA5DA;
+    color: #fff;
+  }
+  section:nth-child(even) {
+    background-color: #262626;
+    color: #fff;
+  }
+  footer {
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  .section-content {
+    max-width: 900px;
+    margin: 20px auto;
+  }
+  .home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .home-content-img {
+    width: 50%;
+  }
+  .home-content-text {
+    width: 50%;
+  }
+  .home-content-img img{
+    width: 100%;
+    max-width: 300px;
+  }
+  .buy-now-button-dark{
+    background-color: #2AA5DA;
+    color: #fff;
+  }
+  .buy-now-button-light{
+    color: #2AA5DA;
+    background-color: #fff;
+    font-weight: 600;
+  }
+  .buy-now-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .buy-now-button:hover {
+    opacity: .8;
+  }
+  .logo-list {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+  }
+  .logo-list img {
+    max-height: 75px;
+    margin-right: 20px;
+  }
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (height: width) */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-links {
+      display: none;
+    }
+    .dropdown {
+      display: none;
+    }
+    .menu-button {
+      display: block;
+    }
+    .column-default{
+        flex-direction: column;
+    }
+    .column-reverse{
+        flex-direction: column-reverse;
+    }
+    .home-content-img, .home-content-text{
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<nav>
+  <img src="your-logo.png" alt="Logo">
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#created-with">Created with</a>
+    <a href="#features">Features</a>
+    <a href="#whats-included">What's Included</a>
+    <a href="#help">Help</a>
+  </div>
+  <div class="dropdown">
+    <a href="#home">Home</a>
+    <a href="#created-with">Created with</a>
+    <a href="#features">Features</a>
+    <a href="#whats-included">What's Included</a>
+    <a href="#help">Help</a>
+  </div>
+  <button class="menu-button">&#9776;</button>
+</nav>
+<section id="home">
+  <div class="section-content">
+    <div class="home-content column-default">
+      <div class="home-content-img">
+        <img src="calculator-image.png" alt="Calculator">
+      </div>
+      <div class="home-content-text">
+        <h1>Smart Calculator</h1>
+        <p>Introducing the Smart Calculator Web Application!</p>
+        <p>Elevate your digital toolkit with our powerful Calculator Web Application, meticulously crafted to meet all your calculation needs. Whether you’re a student, professional, or just someone who needs quick and accurate computations, our application has you covered.</p>
+        <a href="https://codecanyon.net/item/smart-calculator/51411745" target="_blank" class="buy-now-button buy-now-button-dark">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="created-with">
+  <div class="section-content">
+    <h2>Created with</h2>
+    <div class="logo-list">
+      <img src="html-logo.png" alt="HTML">
+      <img src="css-logo.png" alt="CSS">
+      <img src="js-logo.png" alt="JavaScript">
+      <img src="font-awesome.png" alt="Font Awesome">
+      <img src="google-fonts.png" alt="Google Fonts">
+      <!-- Add more logo images here -->
+    </div>
+  </div>
+</section>
+<section id="features">
+  <div class="section-content">
+    <div class="home-content column-reverse">
+      <div class="home-content-text">
+        <h2>Features</h2>
+        <p>- Local Storage Save</p>
+        <p>- Calculation History</p>
+        <p>- Colorful Themes</p>
+        <p>- 7 Calculation Types</p>
+        <p>- Dark/Light Mode</p>
+        <p>- Responsive</p>
+      </div>
+      <div class="home-content-img">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/U2GL9uauV4U?si=v_NTgV0Y01MszBmr" frameborder="0" allowfullscreen></iframe>
+          </div>          
+      </div>
+    </div>
+  </div>
+</section>
+<section id="whats-included">
+  <div class="section-content">
+    <div class="home-content column-default">
+      <div class="home-content-img">
+        <img src="included.png" alt="Calculator">
+      </div>
+      <div class="home-content-text">
+        <h2>What's Included</h2>
+        <p>This package included with 4 files. <br>You can buy the full project from codecanyon.</p>
+        <p>- index.html</p>
+        <p>- style.css</p>
+        <p>- script.js</p>
+        <p>- favicon.png</p>
+        <a href="https://codecanyon.net/item/smart-calculator/51411745" target="_blank" class="buy-now-button buy-now-button-light">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="help">
+  <div class="section-content">
+    <h2>Help</h2>
+    <p>If you need any assistance, please contact me.
+        <br>
+        <a href="mailto:santhushdevraj@gmail.com">santhushdevraj@gmail.com</a>
+    </p>
+  </div>
+</section>
+<footer>
+  <p>© 2024 Smart Calculator. All rights reserved.</p>
+</footer>
+<script>
+  document.querySelector('.menu-button').addEventListener('click', function() {
+    var dropdown = document.querySelector('.dropdown');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  });
+</script>
+</body>
+</html>
